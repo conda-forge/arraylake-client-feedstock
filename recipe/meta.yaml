@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - arraylake = arraylake_client.cli.main:app
 
@@ -23,7 +23,7 @@ requirements:
     - poetry-dynamic-versioning
     - pip
   run:
-    - __linux  # [linux]
+    - __unix  # [unix]
     - python >=3.8,<3.11
     - aiobotocore >=2.4.0,<3.0.0
     - anyio >=3.6.1,<4.0.0
@@ -35,7 +35,7 @@ requirements:
     - pymongo >=4.2.0,<5.0.0
     - cachetools >=5.3.0,<6.0.0
     - structlog >=23.1.0,<24.0.0
-    - uvloop  # [linux]
+    - uvloop  # [unix]
     - email_validator
     - types-aiobotocore-s3
     - typer
