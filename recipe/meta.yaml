@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
   entry_points:
     - arraylake = arraylake_client.cli.main:app
 
@@ -54,7 +54,7 @@ test:
   imports:
     - arraylake_client
   commands:
-    # - pip check
+    - pip check
     - arraylake --version
   requires:
     - pip
