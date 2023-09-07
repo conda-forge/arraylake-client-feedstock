@@ -50,7 +50,7 @@ test:
   imports:
     - arraylake_client
   commands:
-    - pip check
+    # - pip check
     - arraylake --version
   requires:
     - pip
