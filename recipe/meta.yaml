@@ -23,21 +23,17 @@ requirements:
     - poetry-dynamic-versioning
     - pip
   run:
-    - __unix  # [unix]
     - python >=3.8,<3.11
     - aiobotocore >=2.4.0,<3.0.0
     - anyio >=3.6.1,<4.0.0
-    - zarr >=2.14,<2.15
+    - zarr >=2.14,<=2.16
     - numpy >=1.20.0,<2.0.0
     - donfig >=0.7,<1.0
     - pydantic >=1.10.0,<2.0.0
     - httpx >=0.23.0,<1.0
-    - pymongo >=4.2.0,<5.0.0
     - cachetools >=5.3.0,<6.0.0
     - structlog >=23.1.0,<24.0.0
-    - uvloop  # [unix]
     - email_validator
-    - types-aiobotocore-s3
     - typer
     - ruamel.yaml
   run_constrained:
@@ -54,7 +50,7 @@ test:
   imports:
     - arraylake_client
   commands:
-    # - pip check
+    - pip check
     - arraylake --version
   requires:
     - pip
