@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - arraylake = arraylake_client.cli.main:app
 
@@ -24,22 +24,24 @@ requirements:
     - pip
   run:
     - python >=3.8,<3.11
-    - aiobotocore >=2.4.0,<3.0.0
-    - anyio >=3.6.1,<4.0.0
+    - aiobotocore >=2.4,<3
+    - anyio >=3.6.1,<4
     - zarr >=2.14,<=2.16
-    - numpy >=1.20.0,<2.0.0
+    - numpy >=1.20,<2
     - donfig >=0.7,<1.0
-    - pydantic >=1.10.0,<2.0.0
-    - httpx >=0.23.0,<1.0
-    - cachetools >=5.3.0,<6.0.0
-    - structlog >=23.1.0,<24.0.0
-    - email_validator
-    - typer
-    - ruamel.yaml
-  run_constrained:
-    - ruamel.yaml >=0.17,<1.0
-    - typer >=0.6.1,<1.0
+    - pydantic >=1.10,<2
+    - httpx >=0.23,<1.0
+    - cachetools >=5.3,<6
+    - structlog >=23.1,<24
+    - typing_extensions >=4,<5
+    - email_validator >=2,<3
+    - click >=8.1,<9
     - rich >=12.6,<14.0
+    - typer >=0.6,<1.0
+    - pyyaml >=6,<7.0
+    - ruamel.yaml >=0.17,<1.0
+    - python-dateutil >=2,<3
+  run_constrained:
     - fsspec >=2022.11.0
     - kerchunk >=0.1,<1.0
     - h5py >=3.7.0,<4.0.0
