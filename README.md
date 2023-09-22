@@ -147,6 +147,3 @@ Feedstock Maintainers
 * [@olimcc](https://github.com/olimcc/)
 * [@rabernat](https://github.com/rabernat/)
 
-
-<!-- dummy commit to enable rerendering -->
-
