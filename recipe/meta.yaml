@@ -1,5 +1,5 @@
 {% set name = "arraylake-client" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/arraylake_client-{{ version }}.tar.gz
-  sha256: 8ed70531c1d835dee66073fec95de7b11ecbce1537c7d3b3c3467af928dded90
+  sha256: d7c13f14e2ed0560800efb7ca1b57d3a701e3fed7cbb6577fa1e515a800eb633
 
 build:
   noarch: python
@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning
     - pip
   run:
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - aiobotocore >=2.4,<3
     - zarr >=2.14,<=2.16
     - numpy >=1.20,<2
@@ -40,6 +40,7 @@ requirements:
     - pyyaml >=6,<7.0
     - ruamel.yaml >=0.17,<1.0
     - python-dateutil >=2,<3
+    - uvloop >=0.17,<1  # [unix]
   run_constrained:
     - fsspec >=2022.11.0
     - kerchunk >=0.1,<1.0
