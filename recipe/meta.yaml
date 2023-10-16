@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning
     - pip
   run:
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - aiobotocore >=2.4,<3
     - zarr >=2.14,<=2.16
     - numpy >=1.20,<2
@@ -40,6 +40,7 @@ requirements:
     - pyyaml >=6,<7.0
     - ruamel.yaml >=0.17,<1.0
     - python-dateutil >=2,<3
+    - uvloop >=0.17,<1  # [unix]
   run_constrained:
     - fsspec >=2022.11.0
     - kerchunk >=0.1,<1.0
