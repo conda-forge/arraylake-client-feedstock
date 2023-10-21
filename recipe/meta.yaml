@@ -41,6 +41,7 @@ requirements:
     - ruamel.yaml >=0.17,<1.0
     - python-dateutil >=2,<3
     - uvloop >=0.17,<1  # [unix]
+    - aioitertools >=0.11,<1
   run_constrained:
     - fsspec >=2022.11.0
     - kerchunk >=0.1,<1.0
