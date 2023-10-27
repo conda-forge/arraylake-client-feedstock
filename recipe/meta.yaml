@@ -1,5 +1,5 @@
 {% set name = "arraylake-client" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/arraylake_client-{{ version }}.tar.gz
-  sha256: 59e90957fd6beeb56b29f4411d51c47cb449fb5978333bb3c6fb260b2ca63218
+  sha256: f0ea86593849b741e65b3f51f489b07bf8d0b7d0bb59f1b7e51ac76decf235c7
 
 build:
   noarch: python
