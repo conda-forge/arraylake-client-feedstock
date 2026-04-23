@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/arraylake_client-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/arraylake_client-{{ version }}.tar.gz
   sha256: 59e90957fd6beeb56b29f4411d51c47cb449fb5978333bb3c6fb260b2ca63218
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - arraylake = arraylake_client.cli.main:app
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning
     - pip
   run:
-    - python >=3.8,<3.12
+    - python >={{ python_min }},<3.12
     - aiobotocore >=2.4,<3
     - zarr >=2.14,<=2.16
     - numpy >=1.20,<2
@@ -57,6 +57,7 @@ test:
     - arraylake --version
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://docs.earthmover.io
